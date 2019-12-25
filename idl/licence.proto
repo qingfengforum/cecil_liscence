@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package LICENCE;
+
+// option optimize_for = LITE_RUNTIME;
+
+message LicenceBase
+{
+    string serial_num = 1;
+    bool registed = 2;
+    int64 start_time = 3;
+    int64 end_time = 4;
+}
+
+message LicenceList
+{
+    string version = 1;
+    repeated LicenceBase numbers = 2;
+}
